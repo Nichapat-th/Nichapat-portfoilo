@@ -1,28 +1,77 @@
-# Nichapat Thammawit - UX/UI Designer 🎨
-Welcome to my portfolio! I'm a passionate UI/UX designer with a focus on creating intuitive and engaging digital experiences.
+# Nichapat.T - Product Designer Portfolio
 
-## Here's a glimpse of what I do:
+A modern, minimal portfolio website built with React, Vite, and TailwindCSS. Features a dark theme with clean typography and Apple-style spacing.
 
--> User Research 🔎 : I delve deep into understanding user needs and behaviors to inform design decisions. <br>
--> Wireframing & Prototyping ✏️ : I bring ideas to life through wireframes and interactive prototypes. <br>
--> Visual Design 🪄 : I craft beautiful and consistent visual interfaces that are both functional and aesthetically pleasing. <br>
--> Usability Testing 📊 : I iterate and refine designs based on user feedback to ensure optimal user experience. <br>
+## 🚀 Quick Start
 
-## My skills include:
+### Prerequisites
+- Node.js 18+ and npm/yarn/pnpm
 
--> Design Tools: Figma, Sketch, Frammer, Gitbook, Miro <br> 
--> Research Methods: User interviews, surveys, usability testing <br>
--> Design Principles: Accessibility, usability, visual hierarchy, information architecture <br>
--> Collaboration: Working effectively in cross-functional teams <br>
+### Installation
 
-## Check out some of my recent projects:
+1. Install dependencies:
+```bash
+npm install
+```
 
-🚀 rentMe: Platform that connects renters with items they prefer to rent instead of purchasing, allowing lenders to lease out items they possess but don't currently use, providing them with an opportunity to earn extra income. <br>
-🚀 Q&A: Real time interacting by ask question to host <br>
-🚀 Engineering CMU scholar: Design platform management for administration
-🚀 CMU Explore: CMU Community platform by sharing iead and communicate 
+2. Start the development server:
+```bash
+npm run dev
+```
 
-## I'm always looking for new challenges and opportunities to learn and grow. Let's connect!
+3. Build for production:
+```bash
+npm run build
+```
 
-📥 nthammawit@gmail.com
+4. Preview production build:
+```bash
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+/src
+  /components      # Reusable UI components (Section, Card, Tag, Grid, Button)
+  /sections        # Page sections (Header, Hero, WorksGrid, CaseStudy, Footer)
+  /layouts         # Layout components (MainLayout)
+  /assets          # Images, icons, and static files
+  /styles          # Global styles and TailwindCSS
+  /data            # Project data and content
+  /utils           # Utility functions and animations
+```
+
+## 🎨 Features
+
+- **Dark Theme**: Minimal black background with white text
+- **Responsive Design**: Mobile-first approach with breakpoints
+- **Smooth Animations**: Framer Motion for fade-in and slide-up effects
+- **Modular Components**: Easy to update and customize
+- **Type-safe**: ESLint configuration for code quality
+
+## 📝 Customization
+
+### Update Project Data
+Edit `src/data/projects.js` to add or modify projects.
+
+### Update Works Grid
+Edit the `worksGrid` array in `src/data/projects.js`.
+
+### Modify Colors
+Update color tokens in `tailwind.config.js` under the `theme.extend.colors` section.
+
+### Change Typography
+Modify font families in `tailwind.config.js` or add custom fonts in `src/styles/index.css`.
+
+## 🛠️ Tech Stack
+
+- **React 18** - UI library
+- **Vite** - Build tool and dev server
+- **TailwindCSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+
+## 📧 Contact
+
+nthammawit@gmail.com
 
