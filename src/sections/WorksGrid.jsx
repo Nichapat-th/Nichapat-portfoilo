@@ -1,10 +1,20 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import Section from '../components/Section';
 import Grid from '../components/Grid';
 import { worksGrid } from '../data/projects';
 
 const WorksGrid = () => {
+  const navigate = useNavigate();
+
+  const handleWorkClick = (work) => {
+    if (work.title === 'Website Design') {
+      navigate('/website-design');
+    } else if (work.title === 'Logo Design') {
+      navigate('/logo-design');
+    }
+  };
+
   return (
     <Section id="works" className="pt-20">
       <motion.div
@@ -27,14 +37,15 @@ const WorksGrid = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="group cursor-pointer"
+            onClick={() => handleWorkClick(work)}
+            className={`group cursor-pointer ${work.title === 'Website Design' || work.title === 'Logo Design' ? 'hover:opacity-90' : ''}`}
           >
-            <div className="bg-dark-gray rounded-lg overflow-hidden aspect-[4/3] mb-4 flex items-center justify-center">
+            <div className="bg-dark-gray rounded-lg overflow-hidden aspect-[4/3] mb-4 flex items-center justify-center group-hover:bg-opacity-80 transition-all">
               <div className="w-full h-full bg-gradient-to-br from-dark-gray to-dark flex items-center justify-center text-soft-gray">
                 <span className="text-sm">Placeholder</span>
               </div>
             </div>
-            <h3 className="text-lg font-semibold mb-1">{work.title}</h3>
+            <h3 className="text-lg font-semibold mb-1 group-hover:text-white transition-colors">{work.title}</h3>
             <p className="text-sm text-soft-gray">{work.category}</p>
           </motion.div>
         ))}

@@ -1,22 +1,17 @@
-import MainLayout from './layouts/MainLayout';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import WorksGrid from './sections/WorksGrid';
-import CaseStudy from './sections/CaseStudy';
-import Contact from './sections/Contact';
-import { projects } from './data/projects';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import WebsiteDesignProjects from './pages/WebsiteDesignProjects';
+import LogoDesignProjects from './pages/LogoDesignProjects';
 
 function App() {
   return (
-    <MainLayout>
-      <Hero />
-      <About />
-      <WorksGrid />
-      {projects.map((project) => (
-        <CaseStudy key={project.id} project={project} />
-      ))}
-      <Contact />
-    </MainLayout>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/website-design" element={<WebsiteDesignProjects />} />
+        <Route path="/logo-design" element={<LogoDesignProjects />} />
+      </Routes>
+    </Router>
   );
 }
 
