@@ -12,6 +12,8 @@ const WorksGrid = () => {
       navigate('/website-design');
     } else if (work.title === 'Logo Design') {
       navigate('/logo-design');
+    } else if (work.title === 'Present Slide') {
+      navigate('/presentations');
     }
   };
 
@@ -38,7 +40,7 @@ const WorksGrid = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             onClick={() => handleWorkClick(work)}
-            className={`group cursor-pointer ${work.title === 'Website Design' || work.title === 'Logo Design' ? 'hover:opacity-90' : ''}`}
+            className={`group cursor-pointer ${work.title === 'Website Design' || work.title === 'Logo Design' || work.title === 'Present Slide' ? 'hover:opacity-90' : ''}`}
           >
             <div className="bg-dark-gray rounded-lg overflow-hidden aspect-[4/3] mb-4 flex items-center justify-center group-hover:bg-opacity-80 transition-all">
               <div className="w-full h-full bg-gradient-to-br from-dark-gray to-dark flex items-center justify-center text-soft-gray">

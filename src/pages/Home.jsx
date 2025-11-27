@@ -4,6 +4,7 @@ import About from '../sections/About';
 import Skills from '../sections/Skills';
 import WorksGrid from '../sections/WorksGrid';
 import CaseStudy from '../sections/CaseStudy';
+import Photography from '../sections/Photography';
 import Contact from '../sections/Contact';
 import { projects } from '../data/projects';
 
@@ -17,6 +18,7 @@ const Home = () => {
       {projects.map((project) => (
         <CaseStudy key={project.id} project={project} />
       ))}
+      <Photography />
       <Contact />
     </MainLayout>
   );

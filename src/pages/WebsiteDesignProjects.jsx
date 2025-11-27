@@ -33,6 +33,16 @@ const WebsiteDesignProjects = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-dark-gray rounded-xl p-8 border border-dark-gray hover:border-soft-gray transition-all group"
               >
+                {project.image && (
+                  <div className="mb-6 overflow-hidden rounded-lg border border-soft-gray/20">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold mb-2 group-hover:text-white transition-colors">
                     {project.title}
@@ -51,20 +61,6 @@ const WebsiteDesignProjects = () => {
                     <span>Visit Website</span>
                     <span>→</span>
                   </a>
-                )}
-
-                {project.id === 'paper-prints' && (
-                  <div className="mt-6">
-                    <div className="aspect-video bg-dark rounded-lg flex items-center justify-center border border-soft-gray/20">
-                      <div className="text-center">
-                        <div className="w-16 h-16 mx-auto mb-4 bg-soft-gray/20 rounded-lg flex items-center justify-center">
-                          <span className="text-2xl">🖥️</span>
-                        </div>
-                        <p className="text-soft-gray text-sm">Desktop Design</p>
-                        <p className="text-light-gray text-xs mt-2">Desktop image preview for web</p>
-                      </div>
-                    </div>
-                  </div>
                 )}
               </motion.div>
             ))}
