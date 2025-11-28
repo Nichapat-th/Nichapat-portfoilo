@@ -3,10 +3,9 @@ import Section from '../components/Section';
 import { photography } from '../data/photography';
 
 const Photography = () => {
-  // If no photos, show placeholder grid
-  const displayPhotos = photography.length > 0 
-    ? photography 
-    : Array(9).fill(null).map((_, i) => ({ id: `placeholder-${i}`, image: null, alt: `Photo ${i + 1}` }));
+  if (photography.length === 0) {
+    return null;
+  }
 
   return (
     <Section id="photography" className="pt-20 pb-20">
@@ -21,11 +20,14 @@ const Photography = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-white">I dabble in photography and film</h2>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {displayPhotos.map((photo, index) => {
-            // Define heights based on row position
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {photography.map((photo, index) => {
+            // Define heights - adjust based on available photos
             let height;
-            if (index < 3) {
+            if (photography.length <= 3) {
+              // If 3 or fewer photos, use consistent height
+              height = 'h-[300px]';
+            } else if (index < 3) {
               // Row 1: 240px
               height = 'h-[240px]';
             } else if (index < 6) {
@@ -45,17 +47,11 @@ const Photography = () => {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className={`${height} rounded-3xl overflow-hidden bg-dark-gray border border-soft-gray/30`}
               >
-                {photo.image ? (
-                  <img
-                    src={photo.image}
-                    alt={photo.alt}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-dark-gray flex items-center justify-center">
-                    <span className="text-soft-gray text-xs">Photo {index + 1}</span>
-                  </div>
-                )}
+                <img
+                  src={photo.image}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
             );
           })}

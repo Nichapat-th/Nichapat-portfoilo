@@ -13,27 +13,19 @@ const Skills = () => {
     'Basic Typing & Office Skills',
   ];
 
-  const frontendSkills = {
-    'HTML/CSS': [
-      'HTML',
-      'CSS',
-      'CSS Flexbox',
-      'CSS Grid',
-      'Responsive CSS',
-      'TailwindCSS (optional)',
-    ],
-    'Programming': [
-      'Programming Basics',
-      'JavaScript',
-      'Event Handling',
-      'JSON Basics',
-    ],
-    'Frontend Tools': [
-      'Git / GitHub',
-      'VS Code',
-      'Browser DevTools',
-    ],
-  };
+  const frontendSkills = [
+    'HTML',
+    'CSS',
+    'CSS Flexbox',
+    'CSS Grid',
+    'Responsive CSS',
+    'TailwindCSS',
+    'Programming Basics',
+    'JavaScript',
+    'JSON Basics',
+    'Git / GitHub',
+    'VS Code',
+  ];
 
   return (
     <Section id="skills" className="pt-20">
@@ -125,35 +117,19 @@ const Skills = () => {
             <h3 className="text-xl font-bold mb-6 text-soft-gray uppercase tracking-wider">
               Frontend (Basic Coding Skills)
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {Object.entries(frontendSkills).map(([category, skills], catIndex) => (
-                <motion.div
-                  key={catIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+            <div className="flex flex-wrap gap-3">
+              {frontendSkills.map((skill, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: catIndex * 0.1 }}
-                  className="space-y-4"
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-5 py-3 bg-dark-gray rounded-lg text-sm text-light-gray border border-dark-gray hover:border-soft-gray hover:text-white transition-all cursor-default"
                 >
-                  <h4 className="text-base font-semibold text-light-gray">
-                    {category}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, index) => (
-                      <motion.span
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: (catIndex * 0.1) + (index * 0.03) }}
-                        whileHover={{ scale: 1.05 }}
-                        className="px-3 py-1.5 bg-dark rounded-full text-xs text-light-gray border border-soft-gray/20 hover:border-soft-gray hover:text-white transition-all cursor-default"
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
-                  </div>
-                </motion.div>
+                  {skill}
+                </motion.span>
               ))}
             </div>
           </motion.div>
