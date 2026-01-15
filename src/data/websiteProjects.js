@@ -1,6 +1,7 @@
 import PaperPrintWeb from '../assets/PaperPrint_web.png';
 import RoomInfluenceWeb from '../assets/RoomInfluence_web.png';
 import ManachaiTecWeb from '../assets/ManachaiTec_web.png';
+import websitePlaceholder from '../assets/website_placeholder.png';
 // import ChiangMAiLivingHubWeb from '../assets/ChiangMAiLivingHub_web.png'; // Uncomment when file is added
 
 export const websiteProjects = [
@@ -34,7 +35,7 @@ export const websiteProjects = [
     description: 'Community living platform website',
     url: 'https://chiangmailivinghub.com/',
     type: 'Website',
-    image: null, // Set to image when ChiangMAiLivingHub_web.png is added
+    image: websitePlaceholder, // Set to image when ChiangMAiLivingHub_web.png is added
   },
 ];
 
