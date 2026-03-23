@@ -97,5 +97,11 @@ export const worksGrid = [
     category: 'Interaction Design',
     image: '/placeholder-6.jpg',
   },
+  {
+    id: 7,
+    title: 'Health Report Wireframe',
+    category: 'Wireframe / UX',
+    image: '/placeholder-7.jpg',
+  },
 ];
 

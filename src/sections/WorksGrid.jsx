@@ -16,6 +16,8 @@ const WorksGrid = () => {
       navigate('/presentations');
     } else if (work.title === 'Interface Prototype') {
       navigate('/interface-prototype');
+    } else if (work.title === 'Health Report Wireframe') {
+      navigate('/health-report-wireframe');
     }
   };
 
