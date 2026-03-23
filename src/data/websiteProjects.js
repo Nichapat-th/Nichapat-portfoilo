@@ -1,7 +1,12 @@
 import PaperPrintWeb from '../assets/PaperPrint_web.png';
 import RoomInfluenceWeb from '../assets/RoomInfluence_web.png';
 import ManachaiTecWeb from '../assets/ManachaiTec_web.png';
+<<<<<<< HEAD
 import ChinagMaiLivingHubWeb from '../assets/ChinagMaiLivingHub_web.png';
+=======
+import websitePlaceholder from '../assets/website_placeholder.png';
+// import ChiangMAiLivingHubWeb from '../assets/ChiangMAiLivingHub_web.png'; // Uncomment when file is added
+>>>>>>> 7a09bfe7fc1ee16ded4a3ed304a7c85db0dbc122
 
 export const websiteProjects = [
   {
@@ -30,7 +35,12 @@ export const websiteProjects = [
     title: 'Chiang Mai Living Hub',
     description: 'Community living platform website',
     url: 'https://chiangmailivinghub.com/',
+<<<<<<< HEAD
     image: ChinagMaiLivingHubWeb,
+=======
+    type: 'Website',
+    image: websitePlaceholder, // Set to image when ChiangMAiLivingHub_web.png is added
+>>>>>>> 7a09bfe7fc1ee16ded4a3ed304a7c85db0dbc122
   },
 ];
 

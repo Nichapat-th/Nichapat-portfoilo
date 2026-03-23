@@ -47,9 +47,11 @@ const WorksGrid = () => {
             className={`group cursor-pointer ${work.title === 'Website Design' || work.title === 'Logo Design' || work.title === 'Present Slide' || work.title === 'Interface Prototype' ? 'hover:opacity-90' : ''}`}
           >
             <div className="bg-dark-gray rounded-lg overflow-hidden aspect-[4/3] mb-4 flex items-center justify-center group-hover:bg-opacity-80 transition-all">
-              <div className="w-full h-full bg-gradient-to-br from-dark-gray to-dark flex items-center justify-center text-soft-gray">
-                <span className="text-sm">Placeholder</span>
-              </div>
+              <img
+                src={work.image}
+                alt={work.title}
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-lg font-semibold mb-1 group-hover:text-white transition-colors">{work.title}</h3>
             <p className="text-sm text-soft-gray">{work.category}</p>

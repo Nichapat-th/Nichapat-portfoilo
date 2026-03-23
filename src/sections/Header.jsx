@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import resume from '../assets/Nichapat_Resume.pdf';
 
 const Header = () => {
   const navItems = [
@@ -32,6 +33,15 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={resume}
+                download="Nichapat_Resume.pdf"
+                className="text-sm font-medium px-4 py-2 bg-dark-gray hover:bg-soft-gray/20 rounded-lg border border-soft-gray/20 hover:border-soft-gray transition-all uppercase tracking-wide"
+              >
+                Download Resume
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

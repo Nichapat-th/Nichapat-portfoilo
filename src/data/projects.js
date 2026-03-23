@@ -11,6 +11,12 @@ import lucky1 from '../assets/lucky_1.jpg';
 import whattoeat1 from '../assets/whattoeat_1.png';
 import whattoeat2 from '../assets/whattoeat_2.png';
 import whattoeat3 from '../assets/whattoeat_3.png';
+import websitePlaceholder from '../assets/website_placeholder.png';
+import mobilePlaceholder from '../assets/mobile_placeholder.png';
+import logoPlaceholder from '../assets/logo_placeholder.png';
+import presentPlaceholder from '../assets/present_placeholder.png';
+import brandPlaceholder from '../assets/brand_placeholder.png';
+import interfacePlaceholder from '../assets/interface_placeholder.png';
 
 export const projects = [
   {
@@ -65,37 +71,37 @@ export const worksGrid = [
     id: 1,
     title: 'Website Design',
     category: 'UX/UI Design',
-    image: '/placeholder-1.jpg',
+    image: websitePlaceholder,
   },
   {
     id: 2,
     title: 'Mobile Design',
     category: 'UX/UI Design',
-    image: '/placeholder-2.jpg',
+    image: mobilePlaceholder,
   },
   {
     id: 3,
     title: 'Logo Design',
     category: 'UX/UI Design',
-    image: '/placeholder-3.jpg',
+    image: logoPlaceholder,
   },
   {
     id: 4,
     title: 'Present Slide',
     category: 'UX/UI Design',
-    image: '/placeholder-4.jpg',
+    image: presentPlaceholder,
   },
   {
     id: 5,
     title: 'Brand Identity',
     category: 'Visual Design',
-    image: '/placeholder-5.jpg',
+    image: brandPlaceholder,
   },
   {
     id: 6,
     title: 'Interface Prototype',
     category: 'Interaction Design',
-    image: '/placeholder-6.jpg',
+    image: interfacePlaceholder,
   },
   {
     id: 7,

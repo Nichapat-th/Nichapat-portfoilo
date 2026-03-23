@@ -16,9 +16,6 @@ const Skills = () => {
   const frontendSkills = [
     'HTML',
     'CSS',
-    'CSS Flexbox',
-    'CSS Grid',
-    'Responsive CSS',
     'TailwindCSS',
     'Programming Basics',
     'JavaScript',
