@@ -1,10 +1,21 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Section from '../components/Section';
-
-const FIGMA_EMBED_URL = ''; // Paste Figma prototype embed URL here
+import catsnapPrototype from '../assets/catsnap_prototype.mov';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const InterfacePrototype = () => {
+  const { t, lang } = useLanguage();
+
+  const subtitle =
+    lang === 'th'
+      ? 'โปรเจกต์เกม — Interface Prototype'
+      : 'Game Project — Interface Prototype';
+  const description =
+    lang === 'th'
+      ? 'วิดีโอสาธิตอินเทอร์เฟซและโฟลว์ของ Catsnap'
+      : 'Screen recording of the Catsnap interface prototype and interaction flow';
+
   return (
     <div className="min-h-screen bg-dark">
       <Section className="pt-20 pb-12">
@@ -19,10 +30,11 @@ const InterfacePrototype = () => {
               className="inline-flex items-center gap-2 text-soft-gray hover:text-white transition-colors mb-6"
             >
               <span>←</span>
-              <span>Back to Home</span>
+              <span>{t('common.backHome')}</span>
             </Link>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Catsnap</h1>
-            <p className="text-lg text-soft-gray">Game Project — Interface Prototype</p>
+            <p className="text-lg text-soft-gray mb-2">{subtitle}</p>
+            <p className="text-base text-light-gray max-w-2xl">{description}</p>
           </div>
 
           <motion.div
@@ -32,27 +44,14 @@ const InterfacePrototype = () => {
             className="max-w-5xl mx-auto"
           >
             <div className="bg-dark-gray rounded-xl border border-soft-gray/20 overflow-hidden">
-              {FIGMA_EMBED_URL ? (
-                <iframe
-                  src={FIGMA_EMBED_URL}
-                  className="w-full"
-                  style={{ height: '75vh', border: 'none' }}
-                  allowFullScreen
-                  title="Catsnap Figma Prototype"
-                />
-              ) : (
-                <div className="flex flex-col items-center justify-center py-32 text-center px-8">
-                  <div className="w-16 h-16 rounded-full bg-soft-gray/10 flex items-center justify-center mb-6">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-soft-gray">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-xl font-bold mb-2">Catsnap</h2>
-                  <p className="text-soft-gray max-w-md">
-                    Interactive Figma prototype coming soon.
-                  </p>
-                </div>
-              )}
+              <video
+                src={catsnapPrototype}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-auto max-h-[80vh] object-contain bg-black"
+                aria-label="Catsnap interface prototype screen recording"
+              />
             </div>
           </motion.div>
         </motion.div>

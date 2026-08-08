@@ -14,8 +14,8 @@ import whattoeat3 from '../assets/whattoeat_3.png';
 
 import PaperPrintWeb from '../assets/PaperPrint_web.png';
 import logo1 from '../assets/logo_1.png';
-import alabCover from '../assets/alab_store_4.png';
-import design2 from '../assets/design_2.png';
+import alabCover from '../assets/alab_logo_cover.png';
+import healthReportCover from '../assets/health_report_cover.png';
 import interfacePlaceholder from '../assets/interface_placeholder.png';
 
 export const projects = [
@@ -95,6 +95,6 @@ export const worksGrid = [
     id: 7,
     title: 'Health Report Wireframe',
     category: 'Wireframe / UX',
-    image: design2,
+    image: healthReportCover,
   },
 ];
