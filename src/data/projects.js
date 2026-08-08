@@ -11,11 +11,11 @@ import lucky1 from '../assets/lucky_1.jpg';
 import whattoeat1 from '../assets/whattoeat_1.png';
 import whattoeat2 from '../assets/whattoeat_2.png';
 import whattoeat3 from '../assets/whattoeat_3.png';
-import websitePlaceholder from '../assets/website_placeholder.png';
-import mobilePlaceholder from '../assets/mobile_placeholder.png';
-import logoPlaceholder from '../assets/logo_placeholder.png';
-import presentPlaceholder from '../assets/present_placeholder.png';
-import brandPlaceholder from '../assets/brand_placeholder.png';
+
+import PaperPrintWeb from '../assets/PaperPrint_web.png';
+import logo1 from '../assets/logo_1.png';
+import alabCover from '../assets/alab_store_4.png';
+import design2 from '../assets/design_2.png';
 import interfacePlaceholder from '../assets/interface_placeholder.png';
 
 export const projects = [
@@ -32,7 +32,7 @@ export const projects = [
     id: 'piika',
     title: 'Piika',
     subtitle: 'Flower Delivery',
-    tags: ['Delivery', 'Hosting', 'Forum'],
+    tags: ['Delivery', 'Subscription', 'Mobile App'],
     category: 'Mobile App',
     description: 'Weekly fresh flower subscription and delivery service',
     images: [piika1, piika2, piika3],
@@ -40,8 +40,8 @@ export const projects = [
   {
     id: 'led-banner',
     title: 'LED Banner',
-    subtitle: 'Banner Design',
-    tags: ['Delivery', 'Hosting', 'Forum'],
+    subtitle: 'Banner Design Tool',
+    tags: ['Banner', 'Typography', 'Visual Effects'],
     category: 'Design Tool',
     description: 'Interactive banner design tool with text, background, and effects customization',
     images: [led1, led2, led3],
@@ -49,8 +49,8 @@ export const projects = [
   {
     id: 'what-to-eat',
     title: 'What To Eat ?',
-    subtitle: 'Random Menu Design',
-    tags: ['Delivery', 'Hosting', 'Forum'],
+    subtitle: 'Random Menu Selection',
+    tags: ['Random', 'Food', 'Mobile App'],
     category: 'Mobile App',
     description: 'Random menu selection app to help decide what to eat',
     images: [whattoeat1, whattoeat2, whattoeat3],
@@ -59,43 +59,31 @@ export const projects = [
     id: 'lucky-color',
     title: 'Lucky Color',
     subtitle: 'Motelu',
-    tags: ['Delivery', 'Hosting', 'Forum'],
+    tags: ['Color', 'Lifestyle', 'Mobile App'],
     category: 'Mobile App',
-    description: 'Color-based mobile application',
+    description: 'Color-based fortune and lifestyle mobile application',
     images: [lucky1],
   },
 ];
 
 export const worksGrid = [
   {
+    id: 5,
+    title: 'Brand Store For ALAB BRAND',
+    category: 'Product Craft Design',
+    image: alabCover,
+  },
+  {
     id: 1,
     title: 'Website Design',
     category: 'UX/UI Design',
-    image: websitePlaceholder,
-  },
-  {
-    id: 2,
-    title: 'Mobile Design',
-    category: 'UX/UI Design',
-    image: mobilePlaceholder,
+    image: PaperPrintWeb,
   },
   {
     id: 3,
     title: 'Logo Design',
-    category: 'UX/UI Design',
-    image: logoPlaceholder,
-  },
-  {
-    id: 4,
-    title: 'Present Slide',
-    category: 'UX/UI Design',
-    image: presentPlaceholder,
-  },
-  {
-    id: 5,
-    title: 'Brand Identity',
     category: 'Visual Design',
-    image: brandPlaceholder,
+    image: logo1,
   },
   {
     id: 6,
@@ -107,7 +95,6 @@ export const worksGrid = [
     id: 7,
     title: 'Health Report Wireframe',
     category: 'Wireframe / UX',
-    image: '/placeholder-7.jpg',
+    image: design2,
   },
 ];
-

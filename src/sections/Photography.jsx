@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import { photography } from '../data/photography';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Photography = () => {
+  const { t } = useLanguage();
+
   if (photography.length === 0) {
     return null;
   }
@@ -16,8 +19,8 @@ const Photography = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="mb-12">
-          <p className="text-sm text-soft-gray mb-1">Aside from design...</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-white">I dabble in photography and film</h2>
+          <p className="text-sm text-soft-gray mb-1">{t('photography.eyebrow')}</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white">{t('photography.title')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">

@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -13,11 +16,13 @@ const Footer = () => {
       <div className="container-custom py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
-            <p className="text-2xl font-bold mb-2">Nichapat.T</p>
-            <p className="text-sm text-soft-gray">Product Designer</p>
+            <p className="text-2xl font-bold mb-2">Nichapat Thammawit</p>
+            <p className="text-sm text-soft-gray">{t('footer.role')}</p>
           </div>
           <div className="text-sm text-soft-gray">
-            <p>© {new Date().getFullYear()} All rights reserved</p>
+            <p>
+              © {new Date().getFullYear()} {t('footer.rights')}
+            </p>
           </div>
         </div>
       </div>
@@ -26,4 +31,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

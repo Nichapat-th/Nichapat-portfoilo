@@ -15,8 +15,8 @@ const Home = () => {
       <About />
       <Skills />
       <WorksGrid />
-      {projects.map((project) => (
-        <CaseStudy key={project.id} project={project} />
+      {projects.map((project, index) => (
+        <CaseStudy key={project.id} project={project} index={index} />
       ))}
       <Photography />
       <Contact />

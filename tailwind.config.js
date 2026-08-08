@@ -12,7 +12,7 @@ export default {
         'light-gray': '#666666',
         'soft-gray': '#999999',
         'white': '#ffffff',
-        'accent': '#00ff00',
+        'accent': '#ffffff',
       },
       fontFamily: {
         'sans': ['LINE Seed Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
